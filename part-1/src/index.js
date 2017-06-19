@@ -1,3 +1,9 @@
+// Function to cast a number to a string.
+const stringify = (number) => {return number.toString(10);};
+
+// Function to cast a string to an integer.
+const integrify = (string) => {return Number.parseInt(string, 10);};
+
 // Load Express module.
 const express = require('express');
 
@@ -35,7 +41,9 @@ app.get(
 app.get(
   '/add',
   (request, response) => {
-    response.send(request.params.a + request.params.b);
+    response.send(stringify(
+      (integrify(request.query.a) + integrify(request.query.b))
+    ));
   }
 );
 
@@ -43,7 +51,9 @@ app.get(
 app.get(
   '/subtract',
   (request, response) => {
-    response.send(request.params.a - request.params.b);
+    response.send(stringify(
+      (integrify(request.query.a) - integrify(request.query.b))
+    ));
   }
 );
 
@@ -51,7 +61,7 @@ app.get(
 app.get(
   '/double/:number',
   (request, response) => {
-    response.send(2 * request.params.number);
+    response.send(stringify(2 * request.params.number));
   }
 );
 
@@ -59,6 +69,6 @@ app.get(
 app.listen(
   8000,
   () => {
-    console.log('Running on 8000.');
+    console.log('Running on 8000. Browser access: http://127.0.0.1:8000');
   }
 );
