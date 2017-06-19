@@ -5,7 +5,9 @@
   "license": "MIT",
   "private": false,
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "express": ">=4.15.3"
+  },
   "devDependencies": {
     "babel-cli": ">=6.24.1",
     "babel-preset-env": ">=1.5.2",
@@ -16,20 +18,14 @@
     "mocha": ">=3.4.2"
   },
   "scripts": {
-    "lint1":
-      "./node_modules/eslint/bin/eslint.js part-1/src/ part-1/test/; exit 0",
-    "lintfix1":
-      "./node_modules/eslint/bin/eslint.js --fix part-1/src/ part-1/test/; exit 0",
+    "lint1": "./node_modules/eslint/bin/eslint.js part-1/src/ part-1/test/; exit 0",
+    "lintfix1": "./node_modules/eslint/bin/eslint.js --fix part-1/src/ part-1/test/; exit 0",
     "test1": "mocha --compilers js:babel-register part-1/test/*.js",
-    "lint2":
-      "./node_modules/eslint/bin/eslint.js part-2/src/ part-2/test/; exit 0",
-    "lintfix2":
-      "./node_modules/eslint/bin/eslint.js --fix part-2/src/ part-2/test/; exit 0",
+    "lint2": "./node_modules/eslint/bin/eslint.js part-2/src/ part-2/test/; exit 0",
+    "lintfix2": "./node_modules/eslint/bin/eslint.js --fix part-2/src/ part-2/test/; exit 0",
     "test2": "mocha --compilers js:babel-register part-2/test/*.js",
-    "lint3":
-      "./node_modules/eslint/bin/eslint.js part-3/src/ part-3/test/; exit 0",
-    "lintfix3":
-      "./node_modules/eslint/bin/eslint.js --fix part-3/src/ part-3/test/; exit 0",
+    "lint3": "./node_modules/eslint/bin/eslint.js part-3/src/ part-3/test/; exit 0",
+    "lintfix3": "./node_modules/eslint/bin/eslint.js --fix part-3/src/ part-3/test/; exit 0",
     "test3": "mocha --compilers js:babel-register part-3/test/*.js"
   },
   "bugs": {
