@@ -27,14 +27,18 @@ Project Members:
 executing one of the following, depending on the part:
 
     `npm run lint1`
+
     `npm run lint2`
+
     `npm run lint3`
 
 3. Perform the provided tests by executing one of the following, depending on
 the part:
 
     `npm test1`
+
     `npm test2`
+
     `npm test3`
 
 ## Usage and Examples
