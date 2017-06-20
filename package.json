@@ -15,16 +15,21 @@
     "babel-register": ">=6.24.1",
     "chai": ">=4.0.2",
     "eslint": "^4.0.0",
-    "mocha": ">=3.4.2"
+    "mocha": ">=3.4.2",
+    "pg-promise": ">=5.9.3"
   },
   "scripts": {
     "lint1": "./node_modules/eslint/bin/eslint.js part-1/src/; exit 0",
     "lintfix1": "./node_modules/eslint/bin/eslint.js --fix part-1/src/; exit 0",
-    "lint2": "./node_modules/eslint/bin/eslint.js part-2/src/ part-2/test/; exit 0",
-    "lintfix2": "./node_modules/eslint/bin/eslint.js --fix part-2/src/ part-2/test/; exit 0",
-    "test2": "mocha --compilers js:babel-register part-2/test/*.js",
-    "lint3": "./node_modules/eslint/bin/eslint.js part-3/src/ part-3/test/; exit 0",
-    "lintfix3": "./node_modules/eslint/bin/eslint.js --fix part-3/src/ part-3/test/; exit 0",
+    "lint2":
+      "./node_modules/eslint/bin/eslint.js part-2/src/ part-2/test/; exit 0",
+    "lintfix2":
+      "./node_modules/eslint/bin/eslint.js --fix part-2/src/ part-2/test/; exit 0",
+    "test2": "part-2/test/itemsinsection.sh; part-2/test/cheapitemsfirst.sh; part-2/test/cheapitemslast.sh; part-2/test/countitemsinsection.sh",
+    "lint3":
+      "./node_modules/eslint/bin/eslint.js part-3/src/ part-3/test/; exit 0",
+    "lintfix3":
+      "./node_modules/eslint/bin/eslint.js --fix part-3/src/ part-3/test/; exit 0",
     "test3": "mocha --compilers js:babel-register part-3/test/*.js",
     "start": "node part-1/src/index.js"
   },
