@@ -36,12 +36,9 @@ executing one of the following, depending on the part:
 
     `npm run lint3`
 
-3. Perform the provided tests by executing one of the following, depending on
-the part:
+3. Perform the provided tests (which exist only in part 2) by executing:
 
     `npm run test2`
-
-    `npm run test3`
 
 ## Usage and Examples
 
