@@ -48,7 +48,7 @@ executing one of the following, depending on the part:
 
 9. Deploy the part-2 application by executing:
 
-    `part-2/dbinit.sh`
+    `source part-2/dbinit.sh`
 
 10. Examine and exercise the part-2 application by executing:
 
