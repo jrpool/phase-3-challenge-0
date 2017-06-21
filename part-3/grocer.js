@@ -28,7 +28,10 @@ const cartSum = document.getElementById('sum');
   ####################
 */
 
-// Function to return whether the modal dialog box is invisible.
+/*
+  Function to return whether the modal dialog box is invisible and therefore
+  other user actions get responses.
+*/
 
 const uiEnabled = () => {
   return modalBox.className === 'modalbox invisible';
@@ -41,8 +44,9 @@ const addItem = (event) => {
   if (uiEnabled() && event.target.tagName === 'BUTTON') {
     // Identify the item ordered, its name, and its price.
     const orderedItem = event.target.parentNode;
-    const itemName = orderedItem.firstElementChild.textContent;
-    const itemPriceText = orderedItem.lastElementChild.textContent.substring(1);
+    const itemName = orderedItem.querySelector('.item-name').textContent;
+    const itemPriceText
+      = orderedItem.querySelector('.item-price').textContent.substring(1);
     /*
       Create the selected item for the modal dialog box’s list of ordered
       items.
@@ -51,8 +55,8 @@ const addItem = (event) => {
     // Insert it into the modal dialog box’s list.
     boxList.insertBefore(newRow, cartFooter);
     // Populate its cells.
-    newRow.firstChild.textContent = itemName;
-    newRow.lastChild.textContent = '$' + itemPriceText;
+    newRow.firstElementChild.textContent = itemName;
+    newRow.lastElementChild.textContent = '$' + itemPriceText;
     // Update the payment total.
     cartSum.textContent = (
       Number.parseFloat(cartSum.textContent, 10)
@@ -68,7 +72,7 @@ const addItem = (event) => {
 // Function to make the modal dialog box visible.
 
 const exposeModal = (event) => {
-  if (uiEnabled) {
+  if (uiEnabled()) {
     modalBox.className = 'modalbox visible';
   }
 }
@@ -76,9 +80,9 @@ const exposeModal = (event) => {
 // Function to restore the state in which no items are ordered.
 
 const clearOrder = (event) => {
-  if (! uiEnabled) {
+  if (! uiEnabled()) {
     // Remove the modal dialog box’s list of ordered items.
-    const boxRows = modalBox.getElementsbyClassName('cartrow');
+    const boxRows = modalBox.getElementsByClassName('cartrow');
     for (const boxRow of boxRows) {
       boxList.removeChild(boxRow);
     }
@@ -92,7 +96,7 @@ const clearOrder = (event) => {
 // Function to make the modal dialog box invisible.
 
 const hideModal = (event) => {
-  if (! uiEnabled) {
+  if (! uiEnabled()) {
     document.getElementById('modalbox').className = 'modalbox invisible';
   }
 }
