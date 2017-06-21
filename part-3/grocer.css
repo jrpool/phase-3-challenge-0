@@ -113,3 +113,23 @@ body {
 .item-price {
   flex: 0;
 }
+
+/* MODAL DIALOG BOX */
+.modalbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.invisible {
+  display: none;
+}
+.visible {
+  display: block;
+}
+.leftjustified {
+  text-align: left;
+}
+.rightjustified {
+  text-align: right;
+}
