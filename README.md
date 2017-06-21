@@ -23,11 +23,7 @@ Project Members:
 
     `npm i`
 
-4. Create, configure, and initially populate the part-2 database by executing:
-
-    `source ./part-2/dbinit.sh`
-
-5. Perform linting on the files in the `src` and `test` directories by
+4. Perform linting on the files in the `src` and `test` directories by
 executing one of the following, depending on the part:
 
     `npm run lint1`
@@ -36,25 +32,29 @@ executing one of the following, depending on the part:
 
     `npm run lint3`
 
-3. Perform the provided tests (which exist only in part 2) by executing:
+5. Perform the provided tests (which exist only in part 2) by executing:
 
     `npm run test2`
 
-4. Deploy the part-1 application by executing:
+6. Create, configure, and initially populate the part-2 database by executing:
+
+    `source ./part-2/dbinit.sh`
+
+7. Deploy the part-1 application by executing:
 
     `npm run start1`
 
-5. While the previous process still runs, exercise the part-1 application by visiting http://127.0.0.1/8000 with a web browser.
+8. While the previous process still runs, exercise the part-1 application by visiting http://127.0.0.1/8000 with a web browser.
 
-6. Deploy the part-2 application by executing:
+9. Deploy the part-2 application by executing:
 
     `part-2/dbinit.sh`
 
-7. Examine and exercise the part-2 application by executing:
+10. Examine and exercise the part-2 application by executing:
 
     `psql -U grocer grocery_store`
 
-8. Deploy and exercise the part-3 application by opening the file `part-3/grocer.html` with a web browser.
+11. Deploy and exercise the part-3 application by opening the file `part-3/grocer.html` with a web browser.
 
 [chai]: https://chaijs.com/
 [mocha]: https://mochajs.org/
