@@ -60,6 +60,60 @@ executing one of the following, depending on the part:
 
 11. Deploy and exercise the part-3 application by opening the file `part-3/grocer.html` with a web browser.
 
+## Usage Examples
+
+### Part 1
+
+Request in browser: `http://127.0.0.1:8000/add?a=444&b=-1444`
+
+Response in browser: `-1000`
+
+Request in browser: `http://127.0.0.1:8000/double/-0`
+
+Response in browser: `0`
+
+### Part 2
+
+```
+grocery_store=> select * from itemsinsection('bulk');
+ id | name  
+----+-------
+ 16 | Flour
+ 33 | Pasta
+ 36 | Rice
+(3 rows)
+
+grocery_store=> select * from countitemsinsection('packaged');
+ count
+-------
+     5
+(1 row)
+
+grocery_store=> select * from lastshoppername();
+ name  
+-------
+ Punit
+(1 row)
+
+grocery_store=> \d+ orders
+                                             Table "public.orders"
+ Column  |  Type   |                      Modifiers                      | Storage | Stats target | Description
+---------+---------+-----------------------------------------------------+---------+--------------+-------------
+ id      | integer | not null default nextval('orders_id_seq'::regclass) | plain   |              |
+ day     | date    |                                                     | plain   |              |
+ shopper | integer | not null                                            | plain   |              |
+Indexes:
+    "orders_pkey" PRIMARY KEY, btree (id)
+Foreign-key constraints:
+    "orders_shopper_fkey" FOREIGN KEY (shopper) REFERENCES shoppers(id) ON UPDATE CASCADE ON DELETE CASCADE
+Referenced by:
+    TABLE "contents" CONSTRAINT "contents_order_fkey" FOREIGN KEY ("order") REFERENCES orders(id) ON UPDATE CASCADE ON DELETE CASCADE
+```
+
+## Part 3
+
+Exercising `grocer.html` reveals many potential improvements. For example, if you order many items, the cart’s list can become so long that it is no longer possible to clear it or dismiss the cart.
+
 [chai]: https://chaijs.com/
 [mocha]: https://mochajs.org/
 [npm]: https://www.npmjs.com/
