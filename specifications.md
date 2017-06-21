@@ -87,7 +87,7 @@ Then, use [pg-promise](https://www.npmjs.com/package/pg-promise) and [Mocha](htt
 
 Implement these functions in `database.js` using [pg-promise](https://www.npmjs.com/package/pg-promise) to make the following queries:
 
-#### EXCEPTION: THE REQUIREMENTS IN THE FOLLOWING SECTION ARE SATISFIED BY A DIFFERENT METHOD FROM THE REQUIRED METHOD. ALL FUNCTIONS ARE DEFINED WITHIN THE DATABASE AND MAY BE CALLED BY A DATABASE CLIENT (E.G., PSOL).
+#### EXCEPTION: THE REQUIREMENTS IN THE FOLLOWING SECTION ARE SATISFIED BY A DIFFERENT METHOD FROM THE REQUIRED METHOD. ALL FUNCTIONS ARE DEFINED WITHIN THE DATABASE AND MAY BE CALLED BY A DATABASE CLIENT (E.G., PSQL).
 
 - [x] __20:__ `allItems()` : Find the IDs, names, prices, and sections for all grocery **items**
 - [x] __20:__ `itemsInSection(<section>)` : Find the IDs and names of all grocery **items** in the given section
