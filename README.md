@@ -5,6 +5,10 @@ Project Members:
 
 [Jonathan Pool](https://github.com/jrpool)
 
+## Contents and completion status
+
+See the [specifications](specifications.md).
+
 ## Installation and Setup
 
 0. These instructions presuppose that (1) [npm][npm] and [PostgreSQL][postgresql] are installed, (2) there is a PostgreSQL database cluster, (3) PostgreSQL is running, and (4) when you connect to the cluster you are a PostgreSQL superuser.
