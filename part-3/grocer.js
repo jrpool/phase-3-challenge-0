@@ -81,10 +81,10 @@ const exposeModal = (event) => {
 
 const clearOrder = (event) => {
   if (! uiEnabled()) {
+    let deletable;
     // Remove the modal dialog box’s list of ordered items.
-    const boxRows = modalBox.getElementsByClassName('cartrow');
-    for (const boxRow of boxRows) {
-      boxList.removeChild(boxRow);
+    while (deletable = boxList.querySelector('.cartrow')) {
+      boxList.removeChild(deletable);
     }
     // Make the modal dialog box’s payment total $0.
     cartSum.textContent = '0.00';

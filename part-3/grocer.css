@@ -122,6 +122,12 @@ body {
   transform: translate(-50%, -50%);
   background-color: white;
 }
+.modalbox table {
+  border-collapse: collapse;
+  border-style: solid;
+  border-width: thin;
+  border-color: gray;
+}
 .invisible {
   display: none;
 }
@@ -133,4 +139,11 @@ body {
 }
 .rightjustified {
   text-align: right;
+}
+#closemodal h1 {
+  background-color: red;
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  text-align: center;
 }
