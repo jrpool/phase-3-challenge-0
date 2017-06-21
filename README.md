@@ -7,7 +7,7 @@ Project Members:
 
 ## Installation and Setup
 
-0. These instructions presuppose that [npm][npm] and [PostgreSQL][postgresql] are installed, there is a PostgreSQL database cluster, that PostgreSQL is running, and that when you connect to the cluster you are a PostgreSQL superuser.
+0. These instructions presuppose that (1) [npm][npm] and [PostgreSQL][postgresql] are installed, (2) there is a PostgreSQL database cluster, (3) PostgreSQL is running, and (4) when you connect to the cluster you are a PostgreSQL superuser.
 
 1. Make the parent directory of what will be the project’s directory your working directory.
 
@@ -40,7 +40,21 @@ executing one of the following, depending on the part:
 
     `npm run test2`
 
-## Usage and Examples
+4. Deploy the part-1 application by executing:
+
+    `npm run start1`
+
+5. While the previous process still runs, exercise the part-1 application by visiting http://127.0.0.1/8000 with a web browser.
+
+6. Deploy the part-2 application by executing:
+
+    `part-2/dbinit.sh`
+
+7. Examine and exercise the part-2 application by executing:
+
+    `psql -U grocer grocery_store`
+
+8. Deploy and exercise the part-3 application by opening the file `part-3/grocer.html` with a web browser.
 
 [chai]: https://chaijs.com/
 [mocha]: https://mochajs.org/

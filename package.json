@@ -22,15 +22,15 @@
     "lint1": "./node_modules/eslint/bin/eslint.js part-1/src/; exit 0",
     "lintfix1": "./node_modules/eslint/bin/eslint.js --fix part-1/src/; exit 0",
     "lint2":
-      "./node_modules/eslint/bin/eslint.js part-2/src/ part-2/test/; exit 0",
+      "./node_modules/eslint/bin/eslint.js part-2/src/; exit 0",
     "lintfix2":
-      "./node_modules/eslint/bin/eslint.js --fix part-2/src/ part-2/test/; exit 0",
+      "./node_modules/eslint/bin/eslint.js --fix part-2/src/; exit 0",
     "test2": "part-2/test/itemsinsection.sh; part-2/test/cheapitemsfirst.sh; part-2/test/cheapitemslast.sh; part-2/test/countitemsinsection.sh",
     "lint3":
-      "./node_modules/eslint/bin/eslint.js part-3/src/ part-3/test/; exit 0",
+      "./node_modules/eslint/bin/eslint.js part-3/; exit 0",
     "lintfix3":
-      "./node_modules/eslint/bin/eslint.js --fix part-3/src/ part-3/test/; exit 0",
-    "start": "node part-1/src/index.js"
+      "./node_modules/eslint/bin/eslint.js --fix part-3/; exit 0",
+    "start1": "node part-1/src/index.js"
   },
   "bugs": {
     "url": "https://github.com/jrpool/phase-3-challenge.git/issues"
